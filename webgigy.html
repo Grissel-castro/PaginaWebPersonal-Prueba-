@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCC PAGINA PERSONAL</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(180deg, #fff0f6, #ffe4ec, #ffeef8);
+            font-family: 'Poppins', sans-serif;
+            color: #5c4b51;
+            overflow-x: hidden;
+        }
+
+
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(255, 182, 193, 0.4);
+            padding: 12px 20px;
+        }
+
+        .navbar-brand {
+            font-family: 'Pacifico', cursive;
+            color: #ff5fa2 !important;
+            font-size: 28px;
+        }
+
+        .nav-link {
+            color: #ff5fa2 !important;
+            font-weight: 500;
+            margin: 0 8px;
+            transition: 0.3s;
+            border-radius: 20px;
+            padding: 8px 15px !important;
+        }
+
+        .nav-link:hover {
+            background: #ffd4e5;
+            transform: translateY(-2px);
+        }
+
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: #ffd4e5;
+            border-radius: 50%;
+            top: -120px;
+            right: -120px;
+            opacity: 0.4;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #ffc2d1;
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+            opacity: 0.4;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            font-weight: 700;
+            color: #ff4d94;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            margin-top: 15px;
+            color: #c95d8f;
+        }
+
+        .hero-text p {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .hero-img {
+            text-align: center;
+        }
+
+        .hero-img img {
+            width: 380px;
+            border-radius: 40px;
+            border: 8px solid #fff;
+            box-shadow: 0 10px 35px rgba(255, 105, 180, 0.3);
+            transition: 0.5s;
+        }
+
+        .hero-img img:hover {
+            transform: scale(1.03);
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .title h2 {
+            font-size: 45px;
+            color: #ff4d94;
+            font-weight: 700;
+        }
+
+        .title p {
+            color: #9c7a87;
+            margin-top: 10px;
+        }
+
+
+        .cute-card {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.25);
+            transition: 0.4s;
+            height: 100%;
+        }
+
+        .cute-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .cute-card h3 {
+            color: #ff5fa2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cute-card ul {
+            padding-left: 20px;
+        }
+
+        .cute-card li {
+            margin-bottom: 12px;
+        }
+
+        
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 25px;
+            transition: 0.4s;
+            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.25);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+       
+
+        .song-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.25);
+            transition: 0.4s;
+        }
+
+        .song-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .song-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .song-content {
+            padding: 25px;
+        }
+
+        .song-content h4 {
+            color: #ff4d94;
+            font-weight: 700;
+        }
+
+        iframe {
+            border-radius: 20px;
+        }
+
+       
+
+        .game-card img {
+            height: 260px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        
+
+        .project-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+       
+
+        footer {
+            background: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            box-shadow: 0 -4px 20px rgba(255, 182, 193, 0.2);
+        }
+
+        footer h3 {
+            color: #ff5fa2;
+            margin-bottom: 20px;
+        }
+
+        .socials a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 40px;
+            color: #ff5fa2;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: #ff85b5;
+            transform: scale(1.2);
+        }
+
+
+        .btn-cute {
+            background: linear-gradient(135deg, #ff8dc7, #ff5fa2);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 40px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.4s;
+            font-weight: 600;
+        }
+
+        .btn-cute:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+
+                /* GALERIA CARRUSEL */
+
+.cute-gallery {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.cute-gallery img {
+    width: 320px;
+    height: 420px;
+    object-fit: cover;
+    margin: 0 15px;
+    border-radius: 30px;
+    border: 6px solid #fff;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.35);
+    transition: 0.4s;
+}
+
+.cute-gallery img:hover {
+    transform: scale(1.05);
+}
+
+        @media(max-width: 992px) {
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 45px;
+            }
+
+            .hero-img {
+                margin-top: 40px;
+            }
+
+            .hero-img img {
+                width: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">Grissel ✿</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#datos">Datos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#musica">Música</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#juegos">Juegos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mision">Misión</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+  
+
+    <section class="hero" id="inicio">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 hero-text">
+
+                    <h1>Grissel Castro Condori </h1>
+
+                    <h2>Ingeniería de Sistemas 💻</h2>
+
+                    <p>
+                        Hola, soy Grissel  una estudiante apasionada por la tecnología,
+                        los videojuegos, la música y el diseño creativo.
+                        Me encantan los estilos pastel, los conejitos, el anime y las páginas web cute.
+                    </p>
+
+                    <a href="#datos" class="btn-cute">Conocer más </a>
+
+                </div>
+
+                
+
+<div class="col-lg-6 hero-img">
+
+    <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?q=80&w=1200&auto=format&fit=crop"
+        alt="Conejito blanco cute">
+
+</div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="datos">
+
+        <div class="container">
+
+            <div class="title">
+                <h2>Sobre Mí </h2>
+                <p>Un pequeño espacio sobre mis gustos y metas</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="cute-card">
+
+                        <h3>Datos Personales</h3>
+
+                        <ul>
+                            <li>Nombre: Grissel Castro Condori</li>
+                            <li>Edad: 21 años</li>
+                            <li>Ciudad: La Paz - Bolivia</li>
+                            <li>Carrera: Ingeniería de Sistemas</li>
+                            <li>Idiomas: Español e Inglés básico</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="cute-card">
+
+                        <h3>Mis Gustos</h3>
+
+                        <ul>
+                            <li> Estética cute y pastel</li>
+                            <li> Videojuegos</li>
+                            <li> Música</li>
+                            <li>🐰 Conejitos</li>
+                            
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="cute-card">
+
+                        <h3>Mis Objetivos</h3>
+
+                        <ul>
+                            <li> Ser desarrolladora</li>
+                            <li> Mejorar cada día</li>
+                            <li> Tener mi propio proyecto</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- GALERIA -->
+
+            <!-- GALERIA CARRUSEL -->
+
+<div class="cute-gallery mt-5">
+
+    <marquee behavior="scroll" direction="left" scrollamount="8">
+
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+            alt="tecnologia">
+
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
+            alt="outfit cute">
+
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?q=80&w=1200&auto=format&fit=crop"
+            alt="conejo blanco">
+
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+            alt="beauty girl">
+
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+            alt="programacion">
+
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop"
+            alt="fashion outfit">
+
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1200&auto=format&fit=crop"
+            alt="cute bunny">
+
+    </marquee>
+
+</div>
+
+<div class="row g-4">
+
+    <!-- MUSICA 1 -->
+
+    <div class="col-lg-6">
+
+        <div class="song-card">
+
+            <div class="song-content">
+
+                <h4>EXO - Love Shot 💖</h4>
+
+                <p>
+                    Una canción elegante y con un ritmo increíble. Me gusta mucho el estilo,
+                    la coreografía y la vibra aesthetic que transmite.
+                </p>
+
+                <iframe width="100%" height="250"
+                    src="https://www.youtube.com/embed/pSudEWBAYRE"
+                    title="EXO Love Shot"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MUSICA 2 -->
+
+    <div class="col-lg-6">
+
+        <div class="song-card">
+
+            <div class="song-content">
+
+                <h4>Doja Cat - Say So ✨</h4>
+
+                <p>
+                    Me encanta porque tiene un estilo pop relajado, divertido y súper pegajoso.
+                    Además tiene una estética muy bonita.
+                </p>
+
+                <iframe width="100%" height="250"
+                    src="https://www.youtube.com/embed/pok8H_KF1FA"
+                    title="Doja Cat Say So"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MUSICA 3 -->
+
+    <div class="col-lg-6">
+
+        <div class="song-card">
+
+            <div class="song-content">
+
+                <h4>La Mara Santos - Vete lejos</h4>
+
+                <p>
+                    Una cumbia villera clásica súper divertida y con mucha energía para escuchar
+                    con amigos y pasarla bien.
+                </p>
+
+                <iframe width="100%" height="250"
+                    src="https://youtu.be/S2xRx4VYHms?si=_-dT_Qrb2ZFpqUz8"
+                    title="La Mara Santos - Vete lejos"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MUSICA 4 -->
+
+    <div class="col-lg-6">
+
+        <div class="song-card">
+
+            <div class="song-content">
+
+                <h4>BLACKPINK - How You Like That 🖤</h4>
+
+                <p>
+                    Amo la energía de esta canción, el estilo visual y la fuerza que transmite.
+                    Es una de mis favoritas del K-pop.
+                </p>
+
+                <iframe width="100%" height="250"
+                    src="https://www.youtube.com/embed/ioNng23DkIM"
+                    title="BLACKPINK"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- JUEGOS -->
+
+    <section id="juegos">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>Mis Juegos </h2>
+
+                <p>Mis juegos favoritos actualmente</p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="cute-card game-card">
+
+                        
+<img 
+src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop"
+alt="roblox">
+
+
+                        <h3 class="mt-4">Roblox</h3>
+
+                        <p>
+                            Me gusta porque tiene muchos mundos y modos diferentes para jugar con amigos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="cute-card game-card">
+
+                     <img 
+src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop"
+alt="clash royale">   
+
+                        <h3 class="mt-4">Clash Royale</h3>
+
+                        <p>
+                            Un juego divertido y competitivo que me entretiene bastante.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MISION -->
+
+    <section id="mision">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>Misión y Visión </h2>
+
+                <p>Mis metas y sueños a futuro</p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="cute-card">
+
+                        <img 
+src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+class="img-fluid rounded-5 mb-4"
+alt="mision">
+
+                        <h3>Misión </h3>
+
+                        <p>
+                            Mi misión es crecer académicamente como estudiante de Ingeniería de Sistemas,
+                            desarrollando habilidades tecnológicas y creativas para convertirme en una profesional
+                            capaz y responsable.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="cute-card">
+
+                        <img 
+src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200"
+class="img-fluid rounded-5 mb-4"
+alt="vision">
+
+                        <h3>Visión </h3>
+
+                        <p>
+                            Aspiro a trabajar en proyectos tecnológicos importantes,
+                            viajar a otros países y desarrollo de software.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROYECTOS -->
+
+    <section id="proyectos">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>Mis Proyectos </h2>
+
+                <p>Algunos proyectos importantes que realicé</p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="cute-card project-card">
+
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200">
+
+                        <h3 class="mt-4">Bastón Inteligente con ESP32</h3>
+
+                        <p>
+                            Proyecto desarrollado utilizando ESP32 para ayudar a personas con discapacidad visual,
+                            integrando sensores y programación.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="cute-card project-card">
+
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200">
+
+                        <h3 class="mt-4">Página Web CETAL Turno Noche</h3>
+
+                        <p>
+                            Desarrollo de una página web moderna y organizada para el instituto CETAL turno noche,
+                            utilizando HTML, CSS y Bootstrap.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>Mis Redes Sociales 💕</h3>
+
+        <div class="socials">
+
+            <a href="https://www.whatsapp.com/" target="_blank">🟢</a>
+
+            <a href="https://www.instagram.com/" target="_blank">📸</a>
+
+            <a href="https://www.tiktok.com/" target="_blank">🎵</a>
+
+        </div>
+
+        <p class="mt-4">
+            © 2026 | Grissel Castro Condori ✨
+        </p>
+
+    </footer>
+
+    <!-- JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        // Animaciones suaves
+
+        const cards = document.querySelectorAll('.cute-card, .song-card');
+
+        window.addEventListener('scroll', () => {
+
+            cards.forEach(card => {
+
+                const top = card.getBoundingClientRect().top;
+
+                if (top < window.innerHeight - 100) {
+
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0px)";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
